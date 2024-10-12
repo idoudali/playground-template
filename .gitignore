@@ -1,1 +1,3 @@
 venv
+# list of external repos cloned by west
+devops/docker-wrapper

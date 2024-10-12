@@ -15,7 +15,7 @@ References:
 For example, to install the tools in your user environment:
 
 ```bash
-pip install --user commitizen pre-commit
+pip install --user commitizen pre-commit west
 ```
 
 Read the [commitizen](https://commitizen-tools.github.io/commitizen/) documentation
@@ -61,10 +61,19 @@ To build the repo, you can use the following commands:
 
 ```bash
 
-# Create a top-level workspace virtual environment for the repo
+# Step 1: Update the workspace and pull in the rest of the code
+# this step assumes that you have installed west as a user
+# West will also be installed in the venv we create above
+west update
+
+
+# Step 2: Create a top-level workspace virtual environment for the repo
 # This vevn includes only dependencies necessary for setting up
 # the workspace and instantiating the dockerized build environmennt
-#
 make venv
+
+# Activate the workspace venv
+sourve venv/bin/activate
+
 
 ```
