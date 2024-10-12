@@ -1,0 +1,9 @@
+---
+# This repo can execute/build under different compute environments
+# e.g. AWS, or a local server etc
+# This file contains configuration information regarding the
+# diff
+local:
+  docker_registry_prefix: FIXME/
+  docker_login_command: "echo Run local \"docker login FIXME:8082\" and follow the prompt"
+  dvc-storage: s3

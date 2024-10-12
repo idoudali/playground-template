@@ -75,5 +75,45 @@ make venv
 # Activate the workspace venv
 sourve venv/bin/activate
 
+# Start a development container for cpu development
+make dev-container
 
+# Start a GPU development container
+make dev-container-gpu
+
+```
+
+## Interacting with the repo CLI tool
+
+As part of the repo we have a CLI tool that helps automating a
+number of tasks. Currently it wraps and automates our common tasks
+when interacting with docker.
+
+To use the CLI tool, you can use the following commands:
+
+```bash
+# Activate the workspace venv
+sourve venv/bin/activate
+
+# List the supported sub-commands
+./repo-cmds.py --help
+
+# List the docker sub-commands
+./repo-cmds.py docker --help
+
+# The CLI provides commands to build, pull, push the docker images
+# start a prompt inside or run a command inside the docker container and then edit.
+
+# To start a prompt use the prmpt sub-command followed by the name of the docker image
+# to use
+./repo-cmds.py docker prompt ubuntu_2204_dev
+
+# To run command inside the docker container, do something like the following,
+# where after the docker sub-command we use the name of the docker image
+# to use followed by the command to run inside the container
+
+./repo-cmds.py docker ubuntu_2204_base "echo I am inside Docker"
+....
+echo I am inside Docker
+I am inside Docker
 ```
