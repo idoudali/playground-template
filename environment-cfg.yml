@@ -1,0 +1,8 @@
+---
+# This repo can execute/build under different compute environments
+# e.g. AWS, or a local server etc
+# This file contains configuration information regarding the
+# diff
+local:
+  docker_registry_prefix: ghcr.io/idoudali/
+  docker_login_command: "echo Run local, using your GitHub token \"echo $CR_PAT | docker login ghcr.io -u GITHUB_USERNAME --password-stdin\" and follow the prompt"
