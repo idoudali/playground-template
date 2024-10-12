@@ -1,0 +1,15 @@
+---
+manifest:
+  defaults:
+    remote: origin
+
+  remotes:
+    - name: origin
+      url-base: git@github.com:cslab-ntua
+
+  projects:
+  # DevOps
+  - name: docker-wrapper
+    url: https://github.com/idoudali/DockerWrapper.git
+    path: devops/docker-wrapper
+    revision: 36b69491d41b1156af01101dcb45285043893211
