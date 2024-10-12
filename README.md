@@ -58,3 +58,17 @@ tig
 # or ammend it
 git commit --amend
 ```
+
+## Build workflow
+
+To build the repo, you can use the following commands:
+
+```bash
+
+# Create a top-level workspace virtual environment for the repo
+# This vevn includes only dependencies necessary for setting up
+# the workspace and instantiating the dockerized build environmennt
+#
+make venv
+
+```
