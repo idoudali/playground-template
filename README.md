@@ -81,6 +81,18 @@ make dev-container
 # Start a GPU development container
 make dev-container-gpu
 
+# Configure the project for the Release configuration
+make configure-Release
+
+# Build the project
+make build-Release
+
+# Currently we do not have default targets that always build
+# So you will need to specify the target you want to build
+cd build-Release
+# List available targets
+ninja help
+# Then try your luck :)
 ```
 
 ## Interacting with the repo CLI tool
