@@ -1,0 +1,42 @@
+{
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 24,
+    "patch": 0
+  },
+  "version": 5,
+  "configurePresets": [
+    {
+      "name": "Release",
+      "binaryDir": "${sourceDir}/build-Release",
+      "description": "Release build using Ninja generator",
+      "displayName": "Release Config",
+      "generator": "Ninja",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "COMPILER_LAUNCHER": "ccache"
+      },
+      "vendor": {
+        "example.com/ExampleIDE/1.0": {
+          "autoFormat": true
+        }
+      }
+    },
+    {
+      "name": "Debug",
+      "binaryDir": "${sourceDir}/build-Debug",
+      "description": "Debug build using Ninja generator",
+      "displayName": "Release Config",
+      "generator": "Ninja",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "COMPILER_LAUNCHER": "ccache"
+      },
+      "vendor": {
+        "example.com/ExampleIDE/1.0": {
+          "autoFormat": true
+        }
+      }
+    }
+  ]
+}

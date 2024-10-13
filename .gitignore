@@ -125,5 +125,8 @@ dmypy.json
 cython_debug/
 
 
+# CMake build artifacts
+build-*
+
 # list of external repos cloned by west
 devops/docker-wrapper
