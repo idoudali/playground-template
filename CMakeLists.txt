@@ -13,4 +13,9 @@ include(cmake/chroot.cmake)
 # across different CMake files
 set(WORKSPACES_BINARY_DIR ${CMAKE_CURRENT_BINARY_DIR}/workspace)
 
+# Name of the workspace that will hold any example-cpp related tools
+set(EXAMPLE_CPP_WS_NAME example-cpp)
+
+include(workspace/pyvenv-setup.cmake)
+add_subdirectory("libs")
 add_subdirectory("workspace")

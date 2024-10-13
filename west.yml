@@ -13,3 +13,10 @@ manifest:
     url: https://github.com/idoudali/DockerWrapper.git
     path: devops/docker-wrapper
     revision: 36b69491d41b1156af01101dcb45285043893211
+
+  # libs
+  - name: google-test
+    url: https://github.com/google/googletest.git
+    path: libs/google-test
+    submodules: true
+    revision: v1.15.2
