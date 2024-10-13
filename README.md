@@ -100,6 +100,12 @@ ninja help
 # phony targets in Ninja (if that suits you.)
 make targets-Release
 # Then try your luck :)
+
+# To build the documentation do
+cd build-Release
+ninja mkdocs
+# To serve the documentation
+ninja docs-serve
 ```
 
 ## Interacting with the repo CLI tool

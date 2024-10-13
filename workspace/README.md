@@ -12,6 +12,9 @@ you will notice that we are making use of the `pyvenv_create` and
 Currently, the following virtual environments are created:
 
 * `example-cpp`: chroot/pyvenv folder where we install a number of binary libraries.
+* `docs-build`: python-venv used for building the documentation. Installs any
+  mkdocs related dpendencies.
+
 
 ### Build Commands
 
