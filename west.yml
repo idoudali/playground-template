@@ -13,3 +13,10 @@ manifest:
     url: https://github.com/idoudali/DockerWrapper.git
     path: devops/docker-wrapper
     revision: 36b69491d41b1156af01101dcb45285043893211
+
+  # LLM tools
+  - name: llama.cpp
+    url: https://github.com/ggerganov/llama.cpp.git
+    path: llm-tools/llama.cpp
+    submodules: true
+    revision: b3707

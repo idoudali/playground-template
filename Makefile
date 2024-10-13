@@ -54,6 +54,10 @@ build-$(build_type): configure-$(build_type) ## Build the $(build_type) build
 	cd build-$(build_type) && ninja -v -j `nproc` -l `nproc` all
 	cd build-$(build_type) && cp .ninja_log .ninja_log.build
 
+.PHONY: targets-$(build_type)
+targets-$(build_type): configure-$(build_type) ## List the targets for the $(build_type) build
+	@ cd build-$(build_type) && ninja help | grep phony | sort
+
 endef
 
 $(foreach build,$(BUILD_TYPES_ARGS),$(eval $(call BUILD_template,$(build))))

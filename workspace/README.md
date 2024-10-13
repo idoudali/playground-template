@@ -11,7 +11,7 @@ you will notice that we are making use of the `pyvenv_create` and
 
 Currently, the following virtual environments are created:
 
-* `example`: toy python-venv used for demo purposes.
+* `llama-cpp`: chroot/pyvenv folder where we install llama-cpp.
 
 ### Build Commands
 

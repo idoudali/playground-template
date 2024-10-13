@@ -130,3 +130,4 @@ build-*
 
 # list of external repos cloned by west
 devops/docker-wrapper
+llm-tools/llama.cpp
