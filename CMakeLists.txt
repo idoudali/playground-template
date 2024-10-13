@@ -13,9 +13,16 @@ include(cmake/chroot.cmake)
 # across different CMake files
 set(WORKSPACES_BINARY_DIR ${CMAKE_CURRENT_BINARY_DIR}/workspace)
 
-# Name of the workspace that will hold any llama-cpp related tools
+# List of names of the pyvenv/chroot workspaces that we will create Name of the
+# workspace that will hold any llama-cpp related tools
 set(LLAMA_CPP_WS_NAME llama-cpp)
+# Documentation builder workspace
+set(DOCS_BUILD_WS_NAME docs-build)
 
 include(workspace/pyvenv-setup.cmake)
 add_subdirectory("llm-tools")
 add_subdirectory("workspace")
+
+# The docs directory depends that the workspaces have been created and build
+# dependencies in the docs-build pyvenv installed
+add_subdirectory("docs")
