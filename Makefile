@@ -54,6 +54,10 @@ build-$(build_type): configure-$(build_type) ## Build the $(build_type) build
 	cd build-$(build_type) && ninja -v -j `nproc` -l `nproc` all
 	cd build-$(build_type) && cp .ninja_log .ninja_log.build
 
+.PHONY: targets-$(build_type)
+targets-$(build_type): configure-$(build_type) ## List the targets for the $(build_type) build
+	@ cd build-$(build_type) && ninja help | grep phony | sort
+
 endef
 
 $(foreach build,$(BUILD_TYPES_ARGS),$(eval $(call BUILD_template,$(build))))
@@ -67,6 +71,7 @@ help:
 	@ for build in $(BUILD_TYPES_ARGS); do \
 		echo "configure-$$build: ## Configure the $$build build" | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'; \
 		echo "build-$$build: ## Build the $$build build" | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'; \
+		echo "targets-$$build: ## List the targets of $$build build" | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'; \
 	  done
 
 .DEFAULT_GOAL := help

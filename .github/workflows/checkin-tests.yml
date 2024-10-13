@@ -49,3 +49,7 @@ jobs:
         run: |
             source venv/bin/activate \
             && ./repo-cmds.py docker ${{ env.IMAGE_NAME }} "make configure-Release"
+      - name: Build google-test
+        run: |
+            source venv/bin/activate \
+            && ./repo-cmds.py docker ${{ env.IMAGE_NAME }} "cd build-Release && ninja google-test"

@@ -96,6 +96,9 @@ make build-Release
 cd build-Release
 # List available targets
 ninja help
+# or try to build a target in Makefile that will print only the
+# phony targets in Ninja (if that suits you.)
+make targets-Release
 # Then try your luck :)
 ```
 
