@@ -1,0 +1,54 @@
+# Set strict to true to turn warnings into errors to catch warnings within CI.
+strict: true
+theme:
+  name: material
+  # By default, fonts are pulled from Google on the Internet. To support offline usage, this is
+  # disabled.
+  font: false
+  icon:
+    logo: material/math-integral-box
+    # GitHub specific.
+    repo: fontawesome/brands/github
+  favicon: static/math-integral-box.png
+  features:
+    - content.code.annotate
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+markdown_extensions:
+  - admonition
+  - pymdownx.keys
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+extra:
+  social:
+    # - icon: fontawesome/brands/github
+    #   link: https://github.com/johnthagen/python-blueprint
+# This is needed to allow links to work when opened from the file system.
+use_directory_urls: false
+plugins:
+  - search
+  - simple:
+      merge_docs_dir: false
+      folders:
+        - '*'
+        - docs/**
+      ignore:
+      - '*.egg-info'
+      - venv
+      - .cache/**
+      - .devcontainer/**
+      - .github/**
+      - .vscode/**
+      - '**/__pycache__/**'
+      - .git/**
+      - .tox/**
+      - build-*/**
+site_name: Playground template
+copyright: Copyright &copy; 2022
+# GitHub Specific Configuration.
+repo_name: playground-template

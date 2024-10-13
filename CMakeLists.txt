@@ -15,7 +15,13 @@ set(WORKSPACES_BINARY_DIR ${CMAKE_CURRENT_BINARY_DIR}/workspace)
 
 # Name of the workspace that will hold any example-cpp related tools
 set(EXAMPLE_CPP_WS_NAME example-cpp)
+# Documentation builder workspace
+set(DOCS_BUILD_WS_NAME docs-build)
 
 include(workspace/pyvenv-setup.cmake)
 add_subdirectory("libs")
 add_subdirectory("workspace")
+
+# The docs directory depends that the workspaces have been created and build
+# dependencies in the docs-build pyvenv installed
+add_subdirectory("docs")

@@ -8,7 +8,15 @@
 # components that depend on it and will install files inside the chroot/pyvenv.
 #
 
+# llama.cpp workspace
 pyvenv_create(
   NAME ${EXAMPLE_CPP_WS_NAME} PYVENV_DIR
   ${WORKSPACES_BINARY_DIR}/${EXAMPLE_CPP_WS_NAME}
+)
+
+# Documentation build workspace
+pyvenv_create(
+  NAME ${DOCS_BUILD_WS_NAME} #
+  PYVENV_DIR ${WORKSPACES_BINARY_DIR}/${DOCS_BUILD_WS_NAME} #
+  USE_SYSTEM_SITE_PACKAGES FALSE
 )
