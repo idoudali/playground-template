@@ -15,7 +15,7 @@ dev-container: venv ## Create a development container
 	. venv/bin/activate && ./repo-cmds.py docker prompt \
 		--network=host \
 		--volume $(REPO_DIR)/.local:$$HOME/.local \
-		ubuntu_2204_dev
+		ubuntu_22.04_dev
 
 
 dev-container-gpu: venv ## Create a development container with GPU support
@@ -23,7 +23,7 @@ dev-container-gpu: venv ## Create a development container with GPU support
 	. venv/bin/activate && ./repo-cmds.py docker prompt \
 		--network host \
 		--volume $(REPO_DIR)/.local:$$HOME/.local \
-		ubuntu_2204_cuda_dev
+		ubuntu_22.04_cuda_dev
 
 # HELP
 .PHONY: help
