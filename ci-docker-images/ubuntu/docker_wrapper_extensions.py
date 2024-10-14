@@ -21,7 +21,7 @@ class Ubuntu2204(docker_wrapper.DockerImage):
         docker_wrapper (_type_): Parent class
     """
 
-    NAME = "ubuntu_2204_base"
+    NAME = "ubuntu_22.04_base"
     TAG_PREFIX = "base"
 
     def __init__(self, **kwargs) -> None:
@@ -160,7 +160,7 @@ class Ubuntu2204DevBase(Ubuntu2204):
         docker_wrapper (_type_): Parent class
     """
 
-    NAME = "ubuntu_2204_dev_base"
+    NAME = "ubuntu_22.04_dev_base"
     TAG_PREFIX = "dev_base"
 
     def __init__(self, **kwargs) -> None:
@@ -176,7 +176,7 @@ class Ubuntu2204DevBase(Ubuntu2204):
 class Ubuntu2204Dev(Ubuntu2204):
     """Ubuntu 22.04 dev docker image"""
 
-    NAME = "ubuntu_2204_dev"
+    NAME = "ubuntu_22.04_dev"
     TAG_PREFIX = "dev"
 
     def __init__(self, **kwargs) -> None:
@@ -196,7 +196,7 @@ class Ubuntu2204Cuda(Ubuntu2204):
         docker_wrapper (_type_): Parent class
     """
 
-    NAME = "ubuntu_2204_cuda_dev"
+    NAME = "ubuntu_22.04_cuda_dev"
     TAG_PREFIX = "dev"
 
     def __init__(self, **kwargs) -> None:
