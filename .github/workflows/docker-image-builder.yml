@@ -1,0 +1,16 @@
+---
+name: Docker Image Builder
+
+on:
+    workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Echo building message
+      run: echo "Building the Docker image"
